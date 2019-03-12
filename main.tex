@@ -1,0 +1,28 @@
+\documentclass{report}
+\usepackage{pdfpages}
+\usepackage{blindtext}% only for dummy text
+
+\title{Test imported PDF}
+\author{Alexander Pietz}
+\date{March 2019}
+
+\begin{document}
+
+\tableofcontents
+
+\chapter{First Chapter}
+\blindtext[5]
+
+
+\appendix
+\chapter{First Chapter in Appendix}
+\blindtext[1]
+
+\newpage
+\addtocounter{chapter}{1}
+\addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}IDS for SYN Flood Attack}
+\includepdf[pages=1-3]{pdftoimport.pdf}
+
+\chapter{Third Chapter in Appendix}
+\blindtext[1]
+\end{document}
